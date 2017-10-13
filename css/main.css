@@ -1,0 +1,437 @@
+#app {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+#app img {
+  width: 100%;
+}
+.arrow {
+  position: fixed;
+  z-index: 100;
+  width: 10%;
+  left: 45%;
+  top: auto;
+  bottom: 3%;
+  -webkit-animation: arrow 3s infinite;
+  animation: arrow 3s infinite;
+}
+#page1,
+#page2,
+#page3,
+#page4,
+#page5,
+#page6,
+#page7,
+#page8 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+#page1 .text1,
+#page2 .text1,
+#page3 .text1,
+#page4 .text1,
+#page5 .text1,
+#page6 .text1,
+#page7 .text1,
+#page8 .text1,
+#page1 .text2,
+#page2 .text2,
+#page3 .text2,
+#page4 .text2,
+#page5 .text2,
+#page6 .text2,
+#page7 .text2,
+#page8 .text2,
+#page1 .text3,
+#page2 .text3,
+#page3 .text3,
+#page4 .text3,
+#page5 .text3,
+#page6 .text3,
+#page7 .text3,
+#page8 .text3,
+#page1 .text4,
+#page2 .text4,
+#page3 .text4,
+#page4 .text4,
+#page5 .text4,
+#page6 .text4,
+#page7 .text4,
+#page8 .text4 {
+  transition: all 0.5s;
+}
+#page1 {
+  background: url(../img/page1/bg.jpg) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+#page1 .logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  left: auto;
+  width: 50%;
+}
+#page1 .textBox {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+}
+#page1 .text1 {
+  position: absolute;
+  width: 24%;
+  left: 38%;
+  top: -32%;
+}
+#page1 .text2 {
+  width: 80%;
+  margin: 0 auto;
+}
+#page2 {
+  background: url(../img/page2/bg.jpg) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+#page2 .text1 {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  top: 18%;
+}
+#page2 .text2 {
+  position: absolute;
+  width: 60%;
+  left: 30%;
+  top: 32%;
+}
+#page2 .text3 {
+  position: absolute;
+  width: 50%;
+  left: 40%;
+  top: 43%;
+}
+#page3 {
+  background: url(../img/page3/bg.jpg) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+#page3 .textBox {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#page3 .textBox .text1 {
+  position: absolute;
+  width: 27%;
+  right: 19%;
+  left: auto;
+  top: -50%;
+}
+#page3 .textBox .text2 {
+  position: relative;
+  font-size: 0;
+}
+#page4 {
+  background: url(../img/page4/bg.jpg) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+#page4 .textBox {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  top: 15%;
+}
+#page4 .textBox .text1 {
+  width: 70%;
+}
+#page4 .textBox .text2 {
+  margin: 10px 0;
+  width: 80%;
+}
+#page4 .textBox .text3 {
+  width: 100%;
+}
+#page5 {
+  background: url(../img/page5/bg.jpg) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+#page5 .text1 {
+  width: 66%;
+  margin-top: 18%;
+  margin-left: 24%;
+}
+#page5 .text2 {
+  width: 75%;
+  margin: 5% auto;
+}
+#page6 {
+  background: url(../img/page6/bg.jpg) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+#page6 .textBox {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#page6 .text1 {
+  width: 80%;
+  margin: 0% auto 0;
+}
+#page6 .text2 {
+  width: 64%;
+  margin: 3% auto;
+}
+#page6 .text3 {
+  width: 78%;
+  margin: 3% auto;
+}
+#page6 .text4 {
+  width: 50%;
+  margin: 3% auto 0;
+}
+#page7 {
+  background: url(../img/page7/bg.jpg) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+#page7 .textContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+#page7 .textBox {
+  position: absolute;
+  width: 70%;
+  left: 15%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#page7 .textBox .text1 {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 0;
+}
+#page7 .textBox .iptGroup {
+  margin: 10px auto;
+}
+#page7 .textBox .iptGroup label {
+  display: block;
+  margin: 3px 0;
+  color: #ffffff;
+  font-size: 18px;
+  padding-left: 3px;
+}
+#page7 .textBox .iptGroup label span {
+  color: red;
+}
+#page7 .textBox .iptGroup input {
+  width: 100%;
+  height: 35px;
+  border-radius: 3px;
+  border: 0;
+  padding-left: 15px;
+  font-size: 16px;
+}
+#page7 .textBox .btn {
+  width: 50%;
+  margin: 20px auto 0;
+  font-size: 0;
+}
+#page8 {
+  background: url(../img/page8/bg.jpg) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+#page8 .logo {
+  width: 50%;
+  margin: 20px;
+}
+#page8 .textBox {
+  margin: 50px auto;
+  width: 80%;
+}
+#page8 .textBox .text1 {
+  width: 80%;
+  margin: 10px auto;
+}
+#page8 .textBox .text3 {
+  margin: 20px auto;
+  width: 80%;
+}
+.warning {
+  position: fixed;
+  z-index: 1200;
+  width: 280px;
+  height: 45px;
+  top: 30%;
+  left: 50%;
+  margin-left: -140px;
+  line-height: 45px;
+  border: 1px solid #e55e63;
+  color: #e55e63;
+  font-size: 0;
+  background: rgba(255, 255, 255, 0.9);
+  padding-left: 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.warning span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+.warning .warningText {
+  display: inline-block;
+  vertical-align: middle;
+  width: 235px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  text-align: center;
+}
+#loading {
+  position: fixed;
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  z-index: 1500;
+  transition: 0.3s;
+}
+#loading.hidden {
+  z-index: -100;
+  opacity: 0;
+}
+#loading .container {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  margin-left: -30px;
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+#loading .container img {
+  width: 100%;
+}
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+#audio {
+  position: absolute;
+  z-index: -100;
+}
+#audio1 {
+  position: fixed;
+  z-index: 800;
+  left: auto;
+  right: 5%;
+  top: 2%;
+  width: 10%;
+  font-size: 0;
+}
+#audio1 img {
+  width: 100%;
+}
+#audio1.active {
+  animation: scroll 1.5s linear  infinite;
+  -webkit-animation: scroll 1.5s linear  infinite;
+}
+@-webkit-keyframes arrow {
+  0% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    opacity: 0.5;
+  }
+  30% {
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    opacity: 0.5;
+  }
+}
+@keyframes arrow {
+  0% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    opacity: 0.5;
+  }
+  30% {
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<meta name="keywords" content="中国餐饮营销风向标--2017美团点评智能营销峰会" />
+	<meta name="description" content="中国餐饮营销风向标--2017美团点评智能营销峰会" />
+
+	<title>中国餐饮营销风向标--2017美团点评智能营销峰会</title>
+
+
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="css/vue2-animate.min.css?v=3"/>
+	<link rel="stylesheet" href="css/vue_transition.css?v=3" />
+	<link rel="stylesheet" href="css/main.css?v=5" />
+	
+	<div id="audio">
+		<audio src="source/bgm.mp3" id="music" loop="loop"></audio>
+	</div>
+	<div id="audio1" class="active" onclick="audioPlay()">
+		<img src="img/audio1.png"/>
+	</div>
+	<div id="loading">
+		<div class="container">
+			<div class="loadingGif"><img src="img/loading.gif"/></div>
+		</div>
+	</div>
+	<div id="app">
+		
+		<div class="arrow">
+			<img src="img/arrow.png"/>
+		</div>
+		<!--warning-->
+		<transition name="uu" >
+			<div class="warning" v-if="warningState">
+				<span><img src="img/error.png"/></span><div class="warningText">{{warningText}}</div>
+			</div>
+		</transition>
+		<!--1-->
+		<transition :name="transClass" mode="in-out">
+			<div id="page1" v-if="pageState1">
+				<transition>            
+					<div class="logo"><img src="img/page1/logo.png"/></div>
+				</transition>
+				<div class="textBox">
+					<transition enter-active-class="bounceInDown">
+						<div class="text1" v-if="page1.child2"><img src="img/page1/text1.png"/></div>
+					</transition>
+					<transition name="dd">
+						<div class="text2" v-if="page1.child3"><img src="img/page1/text2.png"/></div>
+					</transition>
+				</div>
+			</div>
+		</transition>
+		<!--2-->
+		<transition :name="transClass" mode="in-out">
+			<div id="page2" v-if="pageState2">          
+				<transition enter-active-class="bounceInRight">           
+					<div class="text1" v-if="page2.child1"><img src="img/page2/text1.png"/></div>
+				</transition>
+				<transition enter-active-class="bounceInLeft">
+					<div class="text2" v-if="page2.child2"><img src="img/page2/text2.png"/></div>
+				</transition>
+				<transition  enter-active-class="bounceInLeft">
+					<div class="text3" v-if="page2.child3"><img src="img/page2/text3.png"/></div>
+				</transition>
+			</div>
+		</transition>
+		<!--3-->
+		<transition :name="transClass" mode="in-out">
+			<div id="page3" v-if="pageState3">
+				<div class="textBox">
+					<transition enter-active-class="bounceInDown">
+						<div class="text1" v-if="page3.child1"><img src="img/page3/text1.png"/></div>
+					</transition>
+					<div class="text2"><img src="img/page3/text2.png"/></div>
+				</div>
+			</div>
+		</transition>
+		<!--4-->
+		<transition :name="transClass" mode="in-out">
+			<div id="page4" v-if="pageState4">
+				<div class="textBox">
+					<transition enter-active-class="bounceInRight">
+						<div class="text1" v-if="page4.child1"><img src="img/page4/text1.png"/></div>
+					</transition>
+					<transition enter-active-class="bounceInRight">
+						<div class="text2"  v-if="page4.child2"><img src="img/page4/text2.png"/></div>
+					</transition>
+					<transition enter-active-class="bounceInLeft">
+						<div class="text3" v-if="page4.child3"><img src="img/page4/text3.png?v=2"/></div>
+					</transition>
+				</div>
+			</div>
+		</transition>
+		<!--5-->
+		<transition :name="transClass" mode="in-out">
+			<div id="page5" v-if="pageState5">
+				<transition  enter-active-class="bounceInLeft">
+					<div class="text1" v-if="page5.child1"><img src="img/page5/text1.png"/></div>
+				</transition>
+				<transition  name="du">
+					<div class="text2" v-if="page5.child2"><img src="img/page5/text2.png"/></div>
+				</transition>         
+			</div>
+		</transition>
+		<!--6-->
+		<transition :name="transClass">
+			<div id="page6" v-if="pageState6">
+				<div class="textBox">
+					<transition name="dd">
+						<div class="text1" v-if="page6.child1"><img src="img/page6/text1.png"/></div>
+					</transition>
+					<transition  name="dd">
+						<div class="text2" v-if="page6.child2"><img src="img/page6/text2.png"/></div>
+					</transition>
+					<transition  name="dd">
+						<div class="text3" v-if="page6.child3"><img src="img/page6/text3.png?v=2"/></div>
+					</transition>
+					<transition  name="dd">
+						<div class="text4" v-if="page6.child4"><img src="img/page6/map.png"/></div>
+					</transition>
+				</div>
+				
+			</div>
+		</transition>
+		<!--7-->
+		<transition :name="transClass">
+			<div id="page7" v-if="pageState7">
+				<transition name="uu">
+					<div class="textContainer" v-if="page7.child1">
+						<div class="textBox" >
+							<div class="text1"><img src="img/page7/text1.png"/></div>
+							<div class="iptGroup">
+								<label for="">品牌<span> * </span></label>
+								<input type="text" name="" id="" value="" v-model="ubrand"/>
+							</div>
+							<div class="iptGroup">
+								<label for="">职位<span> * </span></label>
+								<input type="text" name="" id="" value="" v-model="uposition"/>
+							</div>
+							<div class="iptGroup">
+								<label for="">姓名<span> * </span></label>
+								<input type="text" name="" id="" value="" v-model="uname"/>
+							</div>
+							<div class="iptGroup">
+								<label for="">手机<span> * </span></label>
+								<input type="number" name="" id="" value="" v-model="utel"/>
+							</div>
+							<div class="iptGroup">
+								<label for="">邮箱<span> * </span></label>
+								<input type="text" name="" id="" value="" v-model="uemail"/>
+							</div>
+							<div class="btn" @click="doReg"><img src="img/page7/btn.png"/></div>
+						</div>
+					</div>
+				</transition>
+			</div>
+		</transition>
+		<!--8-->
+		<transition :name="transClass">
+			<div id="page8" v-if="pageState8">
+				<div class="logo"><img src="img/page8/logo.png?v=2"/></div>
+				<div class="textBox">
+					<div class="text1"><img src="img/page8/text1.png"/></div>
+					<div class="text2"><img src="img/page8/text2.png"/></div>
+					<transition name="bs">
+						<div class="text3" v-if="page8.child1"><img src="img/page8/text3.png?v=2"/></div>
+					</transition>
+				</div>
+			</div>
+		</transition>
+	</div>
+	
+	
+	
+	<script type="text/javascript" src="js/vue.min.js" ></script>
+	<script type="text/javascript" src="js/vue-resource.min.js" ></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="js/main.js?v=4" ></script>
+</body>
+</html>
